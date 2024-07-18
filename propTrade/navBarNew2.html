@@ -1,0 +1,175 @@
+<head>
+  <!-- Dynamic Tag Manager -->
+  <script>
+    (function(){window.recordTier = window.recordTier || [], window.recordTier.push({eventName: 'dtm.js'});var e = document.getElementsByTagName('script')[0], r = document.createElement('script');r.async = !0, r.src = 'https://dtm-dre.platform.hicloud.com/download/web/dtm.js?id=DTM-ac1262027c6e10a2817cc06442e74a12', e.parentNode.insertBefore(r, e);})();
+    </script>
+    <!-- End Dynamic Tag Manager -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '401833989349647');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=401833989349647&ev=PageView&noscript=1"
+/></noscript>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- End Meta Pixel Code -->
+<meta charset="utf-8">
+<!-- BUILT WITH LEADPAGES https://www.leadpages.com -->
+<title>寶富金業</title>
+<link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="./countryCode/style.css">
+<link rel="stylesheet" href="./sliderCaptcha/captcha.css">
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<script src="https://fastly.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://turing.captcha.qcloud.com/TCaptcha.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<div id="container">
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="padding: 10px 0; background-color: #000 !important;">
+    <div class="container-fluid">
+        <a onclick="navigateToWebsite()" target="_blank"><img src="./image/bf_logoCSh.png" class="logoBf" style="max-width: 240px; height: auto;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link lpBtn homePage" id="nav1" aria-current="page" target="_blank" onclick="navigateToWebsite()">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lpBtn" id="nav2" onclick="aboutUs()" target="_blank">关于我们</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link lpBtn" id="nav3" role="button" data-bs-toggle="dropdown" aria-expanded="false" target="_blank">
+              交易指南
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lpBtn" id="nav4" onclick="helpcenter()" target="_blank">帮助中心</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="regModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: unset !important">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <span id="buttonText" class="iconify icon" data-icon="mdi:alert-circle" style="color: #ff7b4f; min-width: 75px; height: auto"></span>
+          <p style="font-size: 18px; font-weight: bold" class="modalText">恭喜您，註冊成功!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer style="display:flex; position: fixed; left: 0; bottom: 0; width: 100%; background-color: #000; z-index: 999; justify-content: center;">
+  <div class="footerContainer" style="margin: 10px 0 10px; display: flex; align-items: center;width: 100%; justify-content: space-evenly;">
+  <div style="min-width: 50%;">
+    <p style="color: #fff; font-family: Montserrat; font-size: 20px; font-weight: bolder">Social Register Button.</p>
+    <div style="justify-content: space-between; display: flex;">
+      <button type="button" class="btn btn-primary thirdBtn"><span id="buttonText" class="iconify icon socialMedia" data-icon="logos:google-icon"></span>Register with Google</button>
+      <button type="button" class="btn btn-primary thirdBtn"><span id="buttonText" class="iconify icon socialMedia" data-icon="logos:telegram"></span>Register with Telegram</button>
+      <button type="button" class="btn btn-primary thirdBtn"><span id="buttonText" class="iconify icon socialMedia" data-icon="logos:facebook"></span>Register with Facebook</button>
+    </div>
+  </div>
+  </div>
+  </footer>
+</div> 
+<script type="text/javascript" src="./register/firebase.js"></script>
+<script type="text/javascript" src="./register/registerCom.js"></script>
+<script type="text/javascript" src="./register/registerCom3.js"></script>
+<script src="./sliderCaptcha/catcha.js"></script>
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('appcode')) {
+  var appcode = urlParams.get('appcode');
+} else {
+  var appcode = 'BF_999';
+}
+function navigateToWebsite() {
+  window.location.href = 'https://www.baofugold.com?v=' + appcode;
+}
+function aboutUs() {
+  window.location.href = 'https://www.baofugold.com/about/index.html?tag=0&v=' + appcode;
+}
+function account() {
+  window.location.href = 'https://www.baofugold.com/trade/account.html?v=' + appcode;
+}
+function trade() {
+  window.location.href = 'https://www.baofugold.com/trade/index.html?v=' + appcode;
+}
+function transaction() {
+  window.location.href = 'https://www.baofugold.com/trade/transaction.html?v=' + appcode;
+}
+function helpcenter() {
+  window.location.href = 'https://www.baofugold.com/about/helpcenter.html?v=' + appcode;
+}
+
+//語言
+const LANG_LIST = ['tc', 'sc'];
+const langTexts = {
+  tc: {
+    nav1: "首頁",
+    nav2: "關於我們",
+    nav3: "交易指南",
+    nav3_1: "帳戶簡介",
+    nav3_2: "交易規則",
+    nav3_3: "掛單成交說明",
+    nav4: "幫助中心",
+    optionBtn: "電子郵件",
+  },
+  sc: {
+    nav1: "首页",
+    nav2: "关于我们",
+    nav3: "交易指南",
+    nav3_1: "帐户简介",
+    nav3_2: "交易规则",
+    nav3_3: "挂单成交说明",
+    nav4: "帮助中心",
+    optionBtn: "电子邮件",
+  }
+};
+
+let currentLang = 'sc';
+if (urlParams.has('lang') && LANG_LIST.includes(urlParams.get('lang'))) {
+  currentLang = urlParams.get('lang');
+}
+document.getElementById('nav1').textContent = langTexts[currentLang].nav1;
+document.getElementById('nav2').textContent = langTexts[currentLang].nav2;
+document.getElementById('nav3').textContent = langTexts[currentLang].nav3;
+document.getElementById('nav3_1').textContent = langTexts[currentLang].nav3_1;
+document.getElementById('nav3_2').textContent = langTexts[currentLang].nav3_2;
+document.getElementById('nav3_3').textContent = langTexts[currentLang].nav3_3;
+document.getElementById('nav4').textContent = langTexts[currentLang].nav4;
+document.getElementById('optionBtn').textContent = langTexts[currentLang].optionBtn;
+
+const dropdownMenu = document.querySelector('#dropdownMenu');
+if (urlParams.has('register') && urlParams.get('register') === 'both') {
+  dropdownMenu.style.display = '';
+} else {
+  dropdownMenu.style.display = 'none';
+}
+</script>
